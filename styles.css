@@ -87,6 +87,10 @@ img {
   margin-bottom: 42px;
 }
 
+.admin-title-tight {
+  margin-bottom: 24px;
+}
+
 .mini {
   color: var(--accent);
   text-transform: uppercase;
@@ -119,7 +123,13 @@ img {
 .brand-subtitle,
 .hero-text,
 .contact-form label,
-.form-status {
+.form-status,
+.admin-panel p,
+.inquiry-card p,
+.inquiry-meta,
+.admin-guard-notice,
+.admin-info-box p,
+.admin-form label {
   color: var(--muted);
 }
 
@@ -144,6 +154,15 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.brand-link {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.brand-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
 }
 
 .brand img,
@@ -209,6 +228,10 @@ nav a:hover,
   background: var(--hero-overlay), url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
 }
 
+.hero-admin {
+  background: var(--hero-overlay), url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+}
+
 .glow,
 .glow-2 {
   position: absolute;
@@ -244,6 +267,10 @@ nav a:hover,
   color: var(--hero-text);
 }
 
+.admin-hero-grid {
+  min-height: 520px;
+}
+
 .tag,
 .tech-chip {
   display: inline-block;
@@ -276,7 +303,8 @@ nav a:hover,
   line-height: 1.9;
 }
 
-.btn-group {
+.btn-group,
+.admin-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -287,6 +315,7 @@ nav a:hover,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding: 14px 24px;
   border-radius: 16px;
   font-weight: 800;
@@ -320,8 +349,11 @@ nav a:hover,
 .contact-panel,
 .form-panel,
 .ecosystem-item,
-.industry-item,
-.feature-box {
+.feature-box,
+.admin-panel,
+.admin-stat-card,
+.inquiry-card,
+.admin-info-box {
   border: 1px solid var(--border);
   background: var(--bg-soft);
   box-shadow: var(--shadow);
@@ -333,10 +365,12 @@ nav a:hover,
 .project-card:hover,
 .process-card:hover,
 .ecosystem-item:hover,
-.industry-item:hover,
 .feature-box:hover,
 .highlight-card:hover,
-.value-card:hover {
+.value-card:hover,
+.admin-stat-card:hover,
+.inquiry-card:hover,
+.admin-info-box:hover {
   transform: translateY(-4px);
   border-color: rgba(34, 211, 238, 0.4);
 }
@@ -366,7 +400,10 @@ nav a:hover,
 .projects-grid,
 .ecosystem-grid,
 .faq-grid,
-.contact-grid {
+.contact-grid,
+.admin-login-grid,
+.admin-stats-grid,
+.inquiries-grid {
   display: grid;
   gap: 22px;
 }
@@ -375,13 +412,20 @@ nav a:hover,
   grid-template-columns: repeat(2, 1fr);
 }
 
-.stat-box {
+.stat-box,
+.contact-link,
+.admin-stat-card {
   background: var(--bg-soft-2);
+}
+
+.stat-box {
   border-radius: 18px;
   padding: 16px;
 }
 
-.stat-box small {
+.stat-box small,
+.admin-stat-card small,
+.inquiry-meta {
   color: var(--muted-2);
   display: block;
   margin-bottom: 5px;
@@ -398,7 +442,11 @@ nav a:hover,
 .process-card,
 .project-card,
 .faq-card,
-.ecosystem-item {
+.ecosystem-item,
+.admin-panel,
+.admin-stat-card,
+.inquiry-card,
+.admin-info-box {
   border-radius: 24px;
   padding: 24px;
 }
@@ -438,7 +486,8 @@ nav a:hover,
 
 .about-grid,
 .why-grid,
-.contact-grid {
+.contact-grid,
+.admin-login-grid {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 1fr;
@@ -446,7 +495,9 @@ nav a:hover,
 }
 
 .features-grid,
-.faq-grid {
+.faq-grid,
+.admin-stats-grid,
+.inquiries-grid {
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -507,7 +558,8 @@ nav a:hover,
 }
 
 .contact-panel,
-.form-panel {
+.form-panel,
+.admin-panel {
   border-radius: 28px;
   padding: 28px;
 }
@@ -523,7 +575,6 @@ nav a:hover,
   gap: 14px;
   padding: 16px;
   border-radius: 18px;
-  background: var(--bg-soft-2);
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -545,12 +596,16 @@ nav a:hover,
   flex-shrink: 0;
 }
 
-.contact-details strong {
+.contact-details strong,
+.inquiry-card h4,
+.admin-panel h3,
+.admin-info-box h4 {
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 8px;
 }
 
-.contact-form label {
+.contact-form label,
+.admin-form label {
   display: block;
   font-size: 0.95rem;
   margin-bottom: 8px;
@@ -558,7 +613,8 @@ nav a:hover,
 
 .contact-form input,
 .contact-form textarea,
-.contact-form select {
+.contact-form select,
+.admin-form input {
   width: 100%;
   margin-bottom: 18px;
   padding: 14px 16px;
@@ -572,7 +628,8 @@ nav a:hover,
 
 .contact-form input:focus,
 .contact-form textarea:focus,
-.contact-form select:focus {
+.contact-form select:focus,
+.admin-form input:focus {
   border-color: var(--accent);
 }
 
@@ -592,6 +649,19 @@ nav a:hover,
 
 .form-status.error {
   color: var(--danger);
+}
+
+.admin-guard-notice {
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px dashed var(--border);
+  background: var(--bg-soft);
+  margin-bottom: 24px;
+}
+
+.inquiry-card .message {
+  white-space: pre-wrap;
+  line-height: 1.8;
 }
 
 footer {
@@ -632,7 +702,8 @@ footer {
   .services-grid,
   .projects-grid,
   .values-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .inquiries-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -651,7 +722,10 @@ footer {
   .highlight-grid,
   .process-grid,
   .ecosystem-grid,
-  .stats-grid {
+  .stats-grid,
+  .admin-login-grid,
+  .admin-stats-grid,
+  .inquiries-grid {
     grid-template-columns: 1fr !important;
   }
 
