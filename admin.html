@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidmadina Admin Dashboard</title>
+  <meta name="description" content="Sidmadina Techgroup admin dashboard for managing website inquiries." />
+  <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dripd0ze7/image/upload/q_auto/f_auto/v1775666069/6123a426-76a9-4afc-a856-b50411d13853_zz9xn4.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <div class="brand">
+        <img src="https://res.cloudinary.com/dripd0ze7/image/upload/q_auto/f_auto/v1775666069/6123a426-76a9-4afc-a856-b50411d13853_zz9xn4.jpg" alt="Sidmadina Techgroup logo" />
+        <div>
+          <h1>Sidmadina Admin Dashboard</h1>
+          <p class="brand-subtitle">Inquiry Management • Secure Access</p>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <nav>
+          <a href="index.html">Main Site</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#messages">Messages</a>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+          <span id="themeText">Light mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-alt" id="dashboard">
+    <div class="container">
+      <div class="section-title">
+        <div class="mini">Administrator Access</div>
+        <h2>Monitor and Manage Client Inquiries</h2>
+        <p>Sign in with Firebase Authentication to view the live inquiry list from Cloud Firestore.</p>
+      </div>
+
+      <div class="admin-login-grid">
+        <div class="admin-panel">
+          <h3>Admin Sign In</h3>
